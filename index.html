@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site-Opener</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <h1>Site-Opener</h1>
+
+            <div class="sidebar-section">
+                <label for="newSiteName">Site Ka Naam</label>
+                <input type="text" id="newSiteName" placeholder="Jaise: My Blog">
+                <label for="newSiteUrl">Site Ka URL</label>
+                <input type="url" id="newSiteUrl" placeholder="https://example.com">
+                <button id="addSiteBtn">3. Add Site</button>
+            </div>
+
+            <div class="sidebar-section">
+                <label for="sitesDropdown">1. Added Sites</label>
+                <select id="sitesDropdown">
+                    <option value="">-- Site Chunein --</option>
+                </select>
+                <div class="site-actions">
+                    <button id="editSiteBtn">Edit Site</button>
+                    <button id="deleteSiteBtn">Delete Site</button>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <label for="dateSelector">2. Select Date</label>
+                <input type="date" id="dateSelector">
+            </div>
+
+            <div class="sidebar-section">
+                <button id="refreshBtn">4. Refresh Site</button>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <iframe id="siteFrame" src="about:blank" frameborder="0"></iframe>
+            <div id="iframe-placeholder">
+                <h2>Site-Opener mein aapka swagat hai!</h2>
+                <p>Sidebar se koi site select karen ya nayi site joden.</p>
+                <p><b>Note:</b> Kuch websites (jaise Google, Facebook) security ke kaaran yahan load nahi ho sakti hain.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
